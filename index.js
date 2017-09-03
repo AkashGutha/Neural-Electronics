@@ -8,6 +8,7 @@ var n_bits = args.bits || args.b;
 var error = args.error || args.e;
 var learningRate = args.learningRate || args.l;
 var multiplier = args.multiplier || args.m;
+var logPeriod = args.logPeriod || args.lp;
 
 // if we have n_bits argument then make the path for the data file
 if (n_bits) {
@@ -34,7 +35,7 @@ var trainingOptions = {
   errorThresh: error || 0.005, // error threshold to reach
   iterations: 100000000, // maximum training iterations
   log: true, // log progress periodically
-  logPeriod: 1000, // number of iterations between logging
+  logPeriod: logPeriod || 100, // number of iterations between logging
   learningRate: learningRate || 0.1 // learning rate
 };
 
