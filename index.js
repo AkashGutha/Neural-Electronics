@@ -7,6 +7,7 @@ var args = require("yargs").argv;
 var n_bits = args.bits || args.b;
 var error = args.error || args.e;
 var learningRate = args.learningRate || args.l;
+var multiplier = args.multiplier || args.m;
 
 // if we have n_bits argument then make the path for the data file
 if (n_bits) {
@@ -17,7 +18,7 @@ var data = require(dataPath || "./4bit_add_in_out.json");
 
 // make the network with n_bits or fallback to 16 for 4 bits
 var network = new NN({
-  hiddenLayers: [4 * parseInt(n_bits) || 16]
+  hiddenLayers: [(multiplier || 4) * (parseInt(n_bits) || 16)]
 });
 
 // preprocessing the data
