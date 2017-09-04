@@ -1,6 +1,12 @@
 var brain = require("brain");
 var NN = brain.NeuralNetwork;
-var data = require("./8bit_add_in_out.json");
+var args = require("yargs").argv;
+
+// get arguments from console.
+var n_bits = args.bits || args.b;
+var path = args.path || args.p;
+
+var data = require("./"+ ( n_bits || 4 ) +"bit_add_in_out.json");
 
 var D = [];
 
@@ -8,7 +14,7 @@ for (var i = 0; i < data.inputs.length; i++) {
   D.push({ input: data.inputs[i], output: data.outputs[i] });
 }
 
-var precompute = require("./precomputed-net.json");
+var precompute = require( path || "./precomputed-net.json");
 
 // generate our NN from json
 var Net = new NN().fromJSON(precompute);
