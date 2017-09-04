@@ -3,7 +3,7 @@ var NN = brain.NeuralNetwork;
 var fs = require("fs");
 var args = require("yargs").argv;
 
-// ger arguments from console.
+// get arguments from console.
 var n_bits = args.bits || args.b;
 var error = args.error || args.e;
 var learningRate = args.learningRate || args.l;
