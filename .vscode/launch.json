@@ -1,0 +1,39 @@
+{
+  // Use IntelliSense to learn about possible Node.js debug attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch And Generator",
+      "program": "${workspaceRoot}/DataGenerators/And_gate.js"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch Or Generator",
+      "program": "${workspaceRoot}/DataGenerators/Or_gate.js"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch Xor Generator",
+      "program": "${workspaceRoot}/DataGenerators/Xor_gate.js"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch Traning for 4 Bit",
+      "program": "${workspaceRoot}/index.js",
+      "args": ["-e=0.005", "-l=0.1", "-b=4"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch Program",
+      "program": "${workspaceRoot}/accuracy.js"
+    }
+  ]
+}
