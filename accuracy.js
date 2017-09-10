@@ -6,7 +6,7 @@ var args = require("yargs").argv;
 var n_bits = args.bits || args.b;
 var path = args.path || args.p;
 
-var data = require("./"+ ( n_bits || 4 ) +"bit_add_in_out.json");
+var data = require("./Data/"+ ( n_bits || 4 ) +"bit_add_in_out.json");
 
 var D = [];
 

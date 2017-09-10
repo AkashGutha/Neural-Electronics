@@ -12,10 +12,10 @@ var logPeriod = args.logPeriod || args.lp;
 
 // if we have n_bits argument then make the path for the data file
 if (n_bits) {
-  var dataPath = "./" + n_bits + "bit_add_in_out.json";
+  var dataPath = "./Data/" + n_bits + "bit_add_in_out.json";
 }
 // get data from the path or fallback to 4bit data
-var data = require(dataPath || "./4bit_add_in_out.json");
+var data = require(dataPath || "./Data/4bit_add_in_out.json");
 
 // make the network with n_bits or fallback to 16 for 4 bits
 var network = new NN({
