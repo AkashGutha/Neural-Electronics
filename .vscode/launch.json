@@ -25,6 +25,24 @@
     {
       "type": "node",
       "request": "launch",
+      "name": "Launch XNor Generator",
+      "program": "${workspaceRoot}/DataGenerators/XNor_gate.js"
+    },,
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch NAnd Generator",
+      "program": "${workspaceRoot}/DataGenerators/NAnd_gate.js"
+    },,
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch NOr Generator",
+      "program": "${workspaceRoot}/DataGenerators/NOr_gate.js"
+    },
+    {
+      "type": "node",
+      "request": "launch",
       "name": "Launch Traning for 4 Bit",
       "program": "${workspaceRoot}/index.js",
       "args": ["-e=0.005", "-l=0.1", "-b=4"]
