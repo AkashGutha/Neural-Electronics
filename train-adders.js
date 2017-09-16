@@ -36,7 +36,7 @@ var trainingOptions = {
   iterations: 100000000, // maximum training iterations
   log: true, // log progress periodically
   logPeriod: logPeriod || 100, // number of iterations between logging
-  learningRate: learningRate || 0.1 // learning rate
+  learningRate: learningRate || 0.001 // learning rate
 };
 
 console.log(trainingOptions);
