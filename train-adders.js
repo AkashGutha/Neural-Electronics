@@ -23,26 +23,27 @@ var network = new NN({
 });
 
 // preprocessing the data
-var D = [];
+var Data = [];
 for (var i = 0; i < data.inputs.length; i++) {
-  D.push({ input: data.inputs[i], output: data.outputs[i] });
+  Data.push({ input: data.inputs[i], output: data.outputs[i] });
 }
 
 console.log("data preprocessing done");
 
 // trianing options
 var trainingOptions = {
-  errorThresh: error || 0.005, // error threshold to reach
+  errorThresh: error || 0.01, // error threshold to reach
   iterations: 100000000, // maximum training iterations
   log: true, // log progress periodically
   logPeriod: logPeriod || 100, // number of iterations between logging
-  learningRate: learningRate || 0.001 // learning rate
+  learningRate: learningRate || 0.01, // learning rate
+  activation: x => (x >= 0.5 ? 1 : 0)
 };
 
 console.log(trainingOptions);
 
 // train the network
-network.train(D, trainingOptions);
+network.train(Data, trainingOptions);
 
 // convert the network into a json obj and save it.
 var json = network.toJSON();

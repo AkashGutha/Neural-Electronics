@@ -35,4 +35,4 @@ for(var i=0; i< outputs.length; i++){
 all.inputs = inputs;
 all.outputs = outputs;
 
-fs.writeFile("../Data/8bit_add.json", JSON.stringify(all));
+fs.writeFile("8bit_add.json", JSON.stringify(all));
