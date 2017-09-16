@@ -1,4 +1,4 @@
-var brain = require("brain");
+var brain = require("brain.js");
 var NN = brain.NeuralNetwork;
 var fs = require("fs");
 var args = require("yargs").argv;

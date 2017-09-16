@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "brain": "^0.7.0",
+    "brain.js": "^1.0.0-rc.3",
     "optimist": "^0.6.1",
     "yargs": "^8.0.2"
   }
