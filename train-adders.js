@@ -39,6 +39,8 @@ var trainingOptions = {
   learningRate: learningRate || 0.1 // learning rate
 };
 
+console.log(trainingOptions);
+
 // train the network
 network.train(D, trainingOptions);
 
