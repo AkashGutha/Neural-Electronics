@@ -17,7 +17,7 @@ for (var i = 0; i < data.inputs.length; i++) {
 var precompute = require( path || "./precomputed-net.json");
 
 // generate our NN from json
-var Net = new NN().fromJSON(precompute);
+var Net = new NN(precompute.networkData).fromJSON(precompute);
 
 var accuracy = 0;
 
