@@ -13,6 +13,7 @@
     "brain": "^0.7.0",
     "brain.js": "^1.0.0-rc.3",
     "optimist": "^0.6.1",
+    "synaptic": "^1.1.2",
     "yargs": "^8.0.2"
   }
 }
